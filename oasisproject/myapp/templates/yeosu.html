@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <h2>여수 핫플</h2>
+    {% for re in restaurants %}
+    <li>{{re.name}}</li>
+    {{re.location}} {% endfor %}
+    <!--지도 크기-->
+    <div id="map" style="width: 800px; height: 600px"></div>
+    <div id="lat" style="display: none">
+      {% for re in restaurants %} {{re.latitude}} {% endfor %}
+    </div>
+    <div id="lng" style="display: none">
+      {% for re in restaurants %} {{re.longitude}} {% endfor %}
+    </div>
+    <div id="name" style="display: none">
+      {% for re in restaurants %} {{re.name}} {% endfor %}
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e193efa2dbe1f8aeb39cee4f196e2c09&libraries=services,clusterer,drawing"
+    ></script>
+    <script>
+      var container = document.getElementById("map");
+      //   좌표 정보, 확대/축소 정도
+      var options = {
+        center: new kakao.maps.LatLng(34.72576785047592, 127.73300979611788), //처음위치 위도 경도
+        level: 9,
+      };
+
+      var map = new kakao.maps.Map(container, options);
+      //   //문자열 공백 두개로 쪼개서 배열에 저장
+      var list_lat = document
+        .getElementById("lat")
+        .innerText.trim()
+        .split("  ");
+      var list_lng = document
+        .getElementById("lng")
+        .innerText.trim()
+        .split("  ");
+      var list_name = document
+        .getElementById("name")
+        .innerText.trim()
+        .split("  ");
+
+      var restaurantCoordinates = new Array(); //좌표 정보를 저장할 배열 생성
+
+      //위도, 경도 정보 for문 수행하여 차례로 좌표 배열에 저장
+      for (var idx = 0; idx < list_lat.length; idx++) {
+        var latitude = list_lat[idx];
+        var longitude = list_lng[idx];
+        restaurantCoordinates.push(new kakao.maps.LatLng(latitude, longitude));
+      }
+      //저장한 좌표의 수만큼 지도에 marker 띄어줌
+      for (var idx = 0; idx < restaurantCoordinates.length; idx++) {
+        var marker = new kakao.maps.Marker({
+          map: map,
+          position: restaurantCoordinates[idx],
+          title: list_name[idx],
+        });
+      }
+      marker.setMap(map);
+      // //화살표 marker 위치
+      // var markerPosition = new kakao.maps.LatLng(
+      //   34.76047348248397,
+      //   127.66227503381859
+      // );
+
+      // //marker 생성
+      // var marker = new kakao.maps.Marker({
+      //   position: markerPosition,
+      // });
+      // //marker 지도 위에 표시
+      // marker.setMap(map);
+    </script>
+  </body>
+</html>

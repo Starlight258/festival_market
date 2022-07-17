@@ -1,0 +1,63 @@
+﻿{
+  "lastBuildDate": "Sun, 17 Jul 2022 14:50:44 +0900",
+  "total": 5,
+  "start": 1,
+  "display": 5,
+  "items": [
+    {
+      "title": "신지횟집",
+      "link": "",
+      "category": "한식>생선회",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 완도군 완도읍 가용리 1021-5",
+      "roadAddress": "전라남도 완도군 완도읍 해변공원로 117",
+      "mapx": "34.32389156513045",
+      "mapy": "126.74780725245371"
+    },
+    {
+      "title": "달스윗",
+      "link": "http://www.달스윗.com",
+      "category": "음식점>카페,디저트",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 완도군 완도읍 군내리 782-55",
+      "roadAddress": "전라남도 완도군 완도읍 군내길 3",
+      "mapx": "34.31261777665791",
+      "mapy": "126.75633678606968"
+    },
+    {
+      "title": "개성순두부전문점",
+      "link": "",
+      "category": "한식>두부요리",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 완도군 완도읍 군내리 1263-20",
+      "roadAddress": "전라남도 완도군 완도읍 개포로 19",
+      "mapx": "34.31638971417844",
+      "mapy": "126.7503611656827"
+    },
+    {
+      "title": "대성회식당",
+      "link": "http://blog.naver.com/wandosashimi",
+      "category": "한식>전복요리",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 완도군 완도읍 군내리 1259",
+      "roadAddress": "전라남도 완도군 완도읍 해변공원로 59",
+      "mapx": "34.31890073146273",
+      "mapy": "126.74944921827361"
+    },
+    {
+      "title": "빙그레식당 본점",
+      "link": "",
+      "category": "한식>해물,생선요리",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 완도군 완도읍 죽청리 405-2",
+      "roadAddress": "전라남도 완도군 완도읍 청해진로 1565-4",
+      "mapx": "34.342450970909866",
+      "mapy": "126.72993895864177"
+    }
+  ]
+}
