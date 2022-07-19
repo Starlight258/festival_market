@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
-from .models import yeosuRestaurant, jeonjuRestaurant, product, wandoRestaurant
-
+from .models import yeosuRestaurant, jeonjuRestaurant, product, wandoRestaurant, wandoVisit, yeosuVisit
+from .models import jeonjuVisit, gwangyangVisit, goheungVisit, goheungRestaurant, gwangyangRestaurant
 client_id = "lxJGkOeMAIMOo6Tf5dZx"
 client_secret = "Y79oJ07GkN"
 # Create your views here.
@@ -15,15 +15,18 @@ def searchshow(request):
     
 def yeosu(request):
     restaurants = yeosuRestaurant.objects.all
-    return render(request, 'yeosu.html', {'restaurants':restaurants})
+    visit = yeosuVisit.objects.all
+    return render(request, 'yeosu.html', {'restaurants':restaurants,'visit':visit})
 
 def jeonju(request):
     restaurants = jeonjuRestaurant.objects.all
-    return render(request, 'jeonju.html', {'restaurants':restaurants})
+    visit = jeonjuVisit.objects.all
+    return render(request, 'jeonju.html', {'restaurants':restaurants,'visit':visit})
 
 def wando(request):
     restaurants = wandoRestaurant.objects.all
-    return render(request, 'wando.html', {'restaurants':restaurants})
+    visit = wandoVisit.objects.all
+    return render(request, 'wando.html', {'restaurants':restaurants,'visit':visit})
 
 def productshow(request):
     restaurants = jeonjuRestaurant.objects.all
@@ -34,4 +37,19 @@ def detail(request, product_id):
     return render(request, 'prdetail.html', {'product':product_detail})
 
 def mypage(request):
-    return render(request, 'mypage.html')
+    return render(request, 'sidebar.html')
+def mypage2(request):
+    return render(request, 'sidebar.html')
+
+def tempindex(request):
+    return render(request, 'tempindex.html')
+
+def gwangyang(request):
+    restaurants = gwangyangRestaurant.objects.all
+    visit = gwangyangVisit.objects.all
+    return render(request, 'gwangyang.html', {'restaurants':restaurants, 'visit':visit})
+
+def goheung(request):
+    restaurants = goheungRestaurant.objects.all
+    visit = goheungVisit.objects.all
+    return render(request, 'goheung.html', {'restaurants':restaurants, 'visit':visit})

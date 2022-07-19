@@ -1,0 +1,63 @@
+﻿{
+  "lastBuildDate": "Tue, 19 Jul 2022 20:41:46 +0900",
+  "total": 5,
+  "start": 1,
+  "display": 5,
+  "items": [
+    {
+      "title": "광양 매화축제",
+      "link": "http://www.gwangyang.go.kr/",
+      "category": "여행,명소>꽃축제",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 광양시 다압면 도사리 400-2 섬진마을",
+      "roadAddress": "전라남도 광양시 다압면 지막1길 55 섬진마을",
+      "mapx": "35.098829906397306",
+      "mapy": "127.69701873379432"
+    },
+    {
+      "title": "섬진강매화마을",
+      "link": "",
+      "category": "여행,명소>체험여행",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 광양시 다압면 도사리 169-2",
+      "roadAddress": "전라남도 광양시 다압면 목길 31-5",
+      "mapx": "35.08037627515634",
+      "mapy": "127.71534285591262"
+    },
+    {
+      "title": "매화 정보화마을",
+      "link": "http://maehwa.invil.org/",
+      "category": "여행,명소>체험마을",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 광양시 다압면 도사리 548",
+      "roadAddress": "전라남도 광양시 다압면 섬진강매화로 1563-1",
+      "mapx": "35.08026319211061",
+      "mapy": "127.7154131396316"
+    },
+    {
+      "title": "백운산",
+      "link": "",
+      "category": "여행,명소>산,고개",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 광양시 옥룡면",
+      "roadAddress": "전라남도 광양시 옥룡면",
+      "mapx": "35.10609312058022",
+      "mapy": "127.62104865763959"
+    },
+    {
+      "title": "광양 와인동굴",
+      "link": "http://www.wmuseum.co.kr",
+      "category": "여행,명소>동굴",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 광양시 광양읍 용강리 48-1",
+      "roadAddress": "전라남도 광양시 광양읍 강정길 33",
+      "mapx": "34.96128284235882",
+      "mapy": "127.60858359006232"
+    }
+  ]
+}

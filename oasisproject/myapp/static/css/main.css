@@ -11,7 +11,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Amatic SC", sans-serif;
   --font-secondary: "Inter", sans-serif;
 }
@@ -19,7 +21,7 @@
 /* Colors */
 :root {
   --color-default: #212529;
-  --color-primary: #ce1212;
+  --color-primary: #1296ce;
   --color-secondary: #37373f;
 }
 
@@ -42,7 +44,7 @@ a {
 }
 
 a:hover {
-  color: #ec2727;
+  color: #1296ce;
   text-decoration: none;
 }
 
@@ -124,11 +126,11 @@ section {
   font-size: 14px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #676775;
@@ -177,7 +179,7 @@ section {
 }
 
 .scroll-top:hover {
-  background: #ec2727;
+  background: #1296ce;
   color: #fff;
 }
 
@@ -313,7 +315,7 @@ section {
 .header .btn-book-a-table:hover,
 .header .btn-book-a-table:focus:hover {
   color: #fff;
-  background: rgba(206, 18, 18, 0.8);
+  background: #1296ce;
 }
 
 section {
@@ -340,7 +342,7 @@ section {
     position: relative;
   }
 
-  .navbar>ul>li {
+  .navbar > ul > li {
     white-space: nowrap;
     padding: 10px 0 10px 28px;
   }
@@ -367,7 +369,7 @@ section {
     margin-left: 5px;
   }
 
-  .navbar>ul>li>a:before {
+  .navbar > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -381,7 +383,7 @@ section {
   }
 
   .navbar a:hover:before,
-  .navbar li:hover>a:before,
+  .navbar li:hover > a:before,
   .navbar .active:before {
     visibility: visible;
     width: 100%;
@@ -390,7 +392,7 @@ section {
   .navbar a:hover,
   .navbar .active,
   .navbar .active:focus,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #000;
   }
 
@@ -427,11 +429,11 @@ section {
 
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
-  .navbar .dropdown ul li:hover>a {
+  .navbar .dropdown ul li:hover > a {
     color: var(--color-primary);
   }
 
-  .navbar .dropdown:hover>ul {
+  .navbar .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -443,7 +445,7 @@ section {
     visibility: hidden;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: 100%;
@@ -456,13 +458,12 @@ section {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
 
 @media (min-width: 1280px) {
-
   .mobile-nav-show,
   .mobile-nav-hide {
     display: none;
@@ -519,7 +520,7 @@ section {
   }
 
   .navbar a:hover,
-  .navbar li:hover>a {
+  .navbar li:hover > a {
     color: #000;
   }
 
@@ -539,8 +540,8 @@ section {
     border: 1px solid #eee;
   }
 
-  .navbar .dropdown>.dropdown-active,
-  .navbar .dropdown .dropdown>.dropdown-active {
+  .navbar .dropdown > .dropdown-active,
+  .navbar .dropdown .dropdown > .dropdown-active {
     display: block;
   }
 
@@ -645,7 +646,7 @@ section {
 .about .play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--color-primary) 50%, rgba(206, 18, 18, 0.4) 52%);
+  background: radial-gradient(var(--color-primary) 50%, #1296ce 52%);
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -822,7 +823,8 @@ section {
 # Stats Counter Section
 --------------------------------------------------------------*/
 .stats-counter {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/stats-bg.jpg") center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/stats-bg.jpg") center center;
   background-size: cover;
   padding: 100px 0;
 }
@@ -899,12 +901,12 @@ section {
 }
 
 .menu .nav-link:hover {
-  color: var(--color-primary);
+  color: #1296ce;
 }
 
 .menu .nav-link.active {
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: #1296ce;
+  border-color: #1296ce;
 }
 
 .menu .tab-content .tab-header {
@@ -1000,7 +1002,7 @@ section {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #f05656;
+  color: #1296ce;
   font-size: 26px;
   line-height: 0;
 }
@@ -1090,7 +1092,7 @@ section {
 }
 
 @media (min-width: 1200px) {
-  .events .swiper-slide-active+.swiper-slide {
+  .events .swiper-slide-active + .swiper-slide {
     border-left: 1px solid rgba(255, 255, 255, 0.5);
     border-right: 1px solid rgba(255, 255, 255, 0.5);
     z-index: 1;
@@ -1252,7 +1254,7 @@ section {
 .book-a-table .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #df1529;
+  background: #1296ce;
   text-align: left;
   padding: 15px;
   margin-bottom: 24px;
@@ -1311,7 +1313,7 @@ section {
   padding: 12px 15px;
 }
 
-.book-a-table .php-email-form button[type=submit] {
+.book-a-table .php-email-form button[type="submit"] {
   background: var(--color-primary);
   border: 0;
   padding: 14px 60px;
@@ -1320,8 +1322,8 @@ section {
   border-radius: 50px;
 }
 
-.book-a-table .php-email-form button[type=submit]:hover {
-  background: #ec2727;
+.book-a-table .php-email-form button[type="submit"]:hover {
+  background: #1296ce;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1449,13 +1451,13 @@ section {
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #df1529;
+  background: #1296ce;
   text-align: left;
   padding: 15px;
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1508,7 +1510,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: var(--color-primary);
   border: 0;
   padding: 12px 40px;
@@ -1517,7 +1519,7 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #ec2727;
 }
 
@@ -1574,8 +1576,8 @@ section {
 }
 
 .hero .btn-book-a-table:hover {
-  background: rgba(206, 18, 18, 0.8);
-  box-shadow: 0 8px 28px rgba(206, 18, 18, 0.45);
+  background: #1296ce;
+  box-shadow: 0 8px 28px rgba(18, 118, 206, 0.45);
 }
 
 .hero .btn-watch-video {
@@ -1599,7 +1601,7 @@ section {
 }
 
 .hero .btn-watch-video:hover i {
-  color: rgba(206, 18, 18, 0.8);
+  color: #1296ce;
 }
 
 @media (max-width: 640px) {

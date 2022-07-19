@@ -1,0 +1,63 @@
+﻿{
+  "lastBuildDate": "Tue, 19 Jul 2022 21:08:38 +0900",
+  "total": 5,
+  "start": 1,
+  "display": 5,
+  "items": [
+    {
+      "title": "mkr coffee",
+      "link": "https://blog.naver.com/mkr_coffee/",
+      "category": "카페,디저트>카페",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 고흥군 도양읍 봉암리 2786",
+      "roadAddress": "전라남도 고흥군 도양읍 비봉로 177 mkr",
+      "mapx": "34.52565320776879",
+      "mapy": "127.13574225046528"
+    },
+    {
+      "title": "식후경",
+      "link": "https://m.blog.naver.com/cmk2018",
+      "category": "한식>한정식",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 고흥군 고흥읍 남계리 213-4",
+      "roadAddress": "전라남도 고흥군 고흥읍 고흥로 1901 식후경",
+      "mapx": "34.61804469732172",
+      "mapy": "127.29334434346057"
+    },
+    {
+      "title": "익금21",
+      "link": "https://m.blog.naver.com/PostList.nhn?blogId=ikkm21",
+      "category": "카페,디저트>카페",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 고흥군 금산면 어전리 441-8 익금21 카페",
+      "roadAddress": "전라남도 고흥군 금산면 익금해변길 21 익금21 카페",
+      "mapx": "34.43006093138189",
+      "mapy": "127.14487310642508"
+    },
+    {
+      "title": "과역기사님 식당",
+      "link": "",
+      "category": "한식>기사식당",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 고흥군 과역면 과역리 60-3 과역기사님식당",
+      "roadAddress": "전라남도 고흥군 과역면 고흥로 2959-3 과역기사님식당",
+      "mapx": "34.677127762735026",
+      "mapy": "127.36098875473908"
+    },
+    {
+      "title": "동방기사식당",
+      "link": "",
+      "category": "한식>기사식당",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 고흥군 과역면 과역리 557-4",
+      "roadAddress": "전라남도 고흥군 과역면 고흥로 2921 동방기사식당",
+      "mapx": "34.67387743831764",
+      "mapy": "127.36045910113094"
+    }
+  ]
+}

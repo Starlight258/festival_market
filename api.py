@@ -9,8 +9,8 @@ import json
 client_id = "lxJGkOeMAIMOo6Tf5dZx"
 client_secret = "Y79oJ07GkN"
 
-location = "완도"
-encText = urllib.parse.quote(location+" 맛집") #검색어 
+location = "고흥 "
+encText = urllib.parse.quote(location+"맛집") #검색어 
 
 url = "https://openapi.naver.com/v1/search/local.json?sort=comment&query=" + encText+"&display=5" # json형식:리뷰순, 5개씩 보여주기
 
@@ -30,7 +30,7 @@ else:
 resdata = response_body.decode('utf-8') #데이터, 한국말
 
 #응답받은 파일을 json파일로 내보내기
-with open('wando.json', 'w', encoding='UTF-8-sig') as file:
+with open('goheung.json', 'w', encoding='UTF-8-sig') as file:
     file.write(json.dumps(resdata, ensure_ascii=False))
 
 pydata = json.loads(resdata)

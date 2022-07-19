@@ -1,0 +1,269 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sidebar 09</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/styleside.css' %}" />
+  </head>
+  <body>
+    <div class="wrapper d-flex align-items-stretch ">
+      <nav id="sidebar" class="btn-primary">
+        <div class="custom-menu">
+          <button
+            type="button"
+            id="sidebarCollapse"
+            class="btn btn-primary"
+          ></button>
+        </div>
+        <div
+          class="img bg-wrap text-center py-4"
+          style="background-image: url(../static/img/arte.png)"
+        >
+          <div class="user-logo">
+            <div
+              class="img"
+              style="background-image: url(../static/img/person.png)"
+            ></div>
+            <h3>김하늘</h3>
+            <h3 class="text-light">4300 마일</h3>
+          </div>
+        </div>
+        <ul class="list-unstyled components mb-5 btn-primary">
+          <li>
+            <a href="{% url 'home' %}"><span class="fa fa-gift mr-3"></span> Home</a>
+          </li>
+          <li>
+            <a href="{% url 'map' %}"
+              ><span class="fa fa-download mr-3 notif"
+                ><small class="d-flex align-items-center justify-content-center"
+                  >5</small
+                ></span
+              >
+              Map</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'product' %}"><span class="fa fa-gift mr-3"></span> Shop</a>
+          </li>
+          <li class="active">
+            <a href=""><span class="fa fa-home mr-3"></span>MyPage</a>
+          </li>
+          <!-- <li>
+            <a href="#"><span class="fa fa-trophy mr-3"></span> Top Review</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-cog mr-3"></span> Settings</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-support mr-3"></span> Support</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-sign-out mr-3"></span> Sign Out</a>
+          </li> -->
+        </ul>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">관광지 내역</h6>
+          </div>
+          <div class="container"></div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table
+                class="table table-bordered"
+                id="dataTable"
+                width="80%"
+                cellspacing="0"
+              >
+                <thead>
+                  <tr>
+                    <th>지역</th>
+                    <th>관광지</th>
+                    <th>QR</th>
+                    <th>방문날짜</th>
+                    <th>적립여부</th>
+                    <th>기타</th>
+                  </tr>
+                </thead>
+                <!-- <tfoot>
+                  <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Etc</th>
+                  </tr>
+                </tfoot> -->
+                <tbody>
+                  <tr>
+                    <td>
+                      여수
+                    </td>
+                    <td>엑스포</td>
+                    <td><img
+                      src="{% static 'img/영수증.jpg' %}"
+                      style="width: 20px; height: 30px"
+                    /></td>
+                    <td>2022/07/17</td>
+                    <td>X</td>
+                    <td>승인 요청</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      여수
+                    </td>
+                    <td>엑스포</td>
+                    <td><img
+                      src="{% static 'img/영수증.jpg' %}"
+                      style="width: 20px; height: 30px"
+                    /></td>
+                    <td>2022/07/17</td>
+                    <td>X</td>
+                    <td>승인 요청</td>
+                  </tr><tr>
+                    <td>
+                      여수
+                    </td>
+                    <td>엑스포</td>
+                    <td><img
+                      src="{% static 'img/영수증.jpg' %}"
+                      style="width: 20px; height: 30px"
+                    /></td>
+                    <td>2022/07/17</td>
+                    <td>X</td>
+                    <td>승인 요청</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="submitbtn" class="text-right"><button class="btn btn-primary" type="submit">제출</button></div>
+          </div>
+        </div>
+      </div>
+           <!-- Page Content  -->
+           <div id="content" class="p-4 p-md-5 pt-5">
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">영수증 내역</h6>
+              </div>
+              <div class="container"></div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table
+                    class="table table-bordered"
+                    id="dataTable"
+                    width="80%"
+                    cellspacing="0"
+                  >
+                    <thead>
+                      <tr>
+                        <th>영수증</th>
+                        <th>이름</th>
+                        <th>가격</th>
+                        <th>날짜</th>
+                        <th>적립여부</th>
+                        <th>기타</th>
+                      </tr>
+                    </thead>
+                    <!-- <tfoot>
+                      <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Etc</th>
+                      </tr>
+                    </tfoot> -->
+                    <tbody>
+                      <tr>
+                        <td>
+                          <img
+                            src="{% static 'img/영수증.jpg' %}"
+                            style="width: 20px; height: 30px"
+                          />
+                        </td>
+                        <td>여수회수산</td>
+                        <td>350,000</td>
+                        <td>2022/07/17</td>
+                        <td>X</td>
+                        <td>승인 요청</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img
+                            src="{% static 'img/영수증2.jpg' %}"
+                            style="width: 20px; height: 30px"
+                          />
+                        </td>
+                        <td>대성순두부</td>
+                        <td>43,000</td>
+                        <td>2022/07/17</td>
+                        <td>X</td>
+                        <td>승인 요청</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img
+                            src="{% static 'img/영수증3.jpg' %}"
+                            style="width: 20px; height: 30px"
+                          />
+                        </td>
+                        <td>달스윗</td>
+                        <td>34,000</td>
+                        <td>2022/05/20</td>
+                        <td>O</td>
+                        <td>-</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img
+                            src="{% static 'img/영수증4.jpg' %}"
+                            style="width: 20px; height: 30px"
+                          />
+                        </td>
+                        <td>옛날 순대 전문점</td>
+                        <td>38,000</td>
+                        <td>2022/05/20</td>
+                        <td>O</td>
+                        <td>-</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="submitbtn" class="text-right"><button class="btn btn-primary" type="submit">제출</button></div>
+              </div>
+            </div>
+          </div>
+
+       
+      </div>
+    </div>
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/mainside.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+﻿{
+  "lastBuildDate": "Mon, 18 Jul 2022 01:13:48 +0900",
+  "total": 5,
+  "start": 1,
+  "display": 5,
+  "items": [
+    {
+      "title": "오동도",
+      "link": "http://tour.yeosu.go.kr/tour/travel/10tour/odongdo",
+      "category": "여행,명소>섬",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 여수시 수정동 산1-11",
+      "roadAddress": "전라남도 여수시 수정동 산1-11",
+      "mapx": "34.744575680128676",
+      "mapy": "127.7662940287811"
+    },
+    {
+      "title": "아쿠아플라넷 여수",
+      "link": "http://www.aquaplanet.co.kr/yeosu/index.jsp",
+      "category": "관람,체험>아쿠아리움",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 여수시 수정동 774-1",
+      "roadAddress": "전라남도 여수시 오동도로 61-11 아쿠아리움",
+      "mapx": "34.746290429069596",
+      "mapy": "127.74856424055943"
+    },
+    {
+      "title": "여수 낭만포차거리",
+      "link": "",
+      "category": "지역명소>도보코스",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 여수시 종화동 299-1 거북선대교아래",
+      "roadAddress": "전라남도 여수시 하멜로 102 거북선대교아래",
+      "mapx": "34.73647512993156",
+      "mapy": "127.74915269587574"
+    },
+    {
+      "title": "이순신광장",
+      "link": "",
+      "category": "여행,명소>광장",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 여수시 중앙동 383",
+      "roadAddress": "전라남도 여수시 선어시장길 6",
+      "mapx": "34.73945284629736",
+      "mapy": "127.73607617633397"
+    },
+    {
+      "title": "유월드 루지 테마파크",
+      "link": "http://u-world.kr/",
+      "category": "여행,명소>테마파크",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 여수시 소라면 죽림리 116 유월드루지 테마파크",
+      "roadAddress": "전라남도 여수시 소라면 안심산길 155 유월 드루지테마파크",
+      "mapx": "34.74789304256724",
+      "mapy": "127.64149082683406"
+    }
+  ]
+}

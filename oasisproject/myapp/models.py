@@ -36,3 +36,45 @@ class wandoRestaurant(models.Model): #이름,위치,위도,경도
     location=models.CharField(max_length=50, default='')
     latitude=models.FloatField(default=0.0)
     longitude=models.FloatField(default=0.0)
+
+class wandoVisit(models.Model): #이름,위치,위도,경도
+    name=models.CharField(max_length=15) 
+    location=models.CharField(max_length=50, default='')
+    latitude=models.FloatField(default=0.0)
+    longitude=models.FloatField(default=0.0)
+
+class yeosuVisit(models.Model): #이름,위치,위도,경도
+    name=models.CharField(max_length=15) 
+    location=models.CharField(max_length=50, default='')
+    latitude=models.FloatField(default=0.0)
+    longitude=models.FloatField(default=0.0)
+
+class jeonjuVisit(models.Model): #이름,위치,위도,경도
+    name=models.CharField(max_length=15) 
+    location=models.CharField(max_length=50, default='')
+    latitude=models.FloatField(default=0.0)
+    longitude=models.FloatField(default=0.0)
+
+class goheungVisit(models.Model): #이름,위치,위도,경도
+    name=models.CharField(max_length=15) 
+    location=models.CharField(max_length=50, default='')
+    latitude=models.FloatField(default=0.0)
+    longitude=models.FloatField(default=0.0)
+
+class gwangyangVisit(models.Model): #이름,위치,위도,경도
+    name=models.CharField(max_length=15) 
+    location=models.CharField(max_length=50, default='')
+    latitude=models.FloatField(default=0.0)
+    longitude=models.FloatField(default=0.0)
+
+class goheungRestaurant(models.Model): #이름,위치,위도,경도
+    name=models.CharField(max_length=15) 
+    location=models.CharField(max_length=50, default='')
+    latitude=models.FloatField(default=0.0)
+    longitude=models.FloatField(default=0.0)
+
+class gwangyangRestaurant(models.Model): #이름,위치,위도,경도
+    name=models.CharField(max_length=15) 
+    location=models.CharField(max_length=50, default='')
+    latitude=models.FloatField(default=0.0)
+    longitude=models.FloatField(default=0.0)

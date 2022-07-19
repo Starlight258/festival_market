@@ -45,6 +45,7 @@
 
     <!-- Template Main CSS File -->
     <link href="{% static 'css/main.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/productcustom.css' %}" rel="stylesheet" />
 
     <!-- =======================================================
   * Template Name: Yummy - v1.0.0
@@ -64,31 +65,41 @@
         >
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1>마일리지<span>.</span></h1>
+          <img src="{% static '/img/ourlogo.png' %}" alt="" />
+
+          <!-- <h1>마일리지<span>.</span></h1> -->
         </a>
 
         <nav id="navbar" class="navbar">
           <ul>
             <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="{% url 'product' %}">Mall</a></li>
-            <li><a href="{% url 'map' %}">Restaurants</a></li>
-            <li><a href="#chefs">Chefs</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+            <!-- <li><a href="#about">About</a></li> -->
             <li class="dropdown">
               <a href="#"
-                ><span>Drop Down</span>
+                ><span>Map</span>
                 <i class="bi bi-chevron-down dropdown-indicator"></i
               ></a>
               <ul>
-                <li><a href="#">Drop Down 1</a></li>
                 <li class="dropdown">
                   <a href="#"
-                    ><span>Deep Drop Down</span>
+                    ><span>전라남도</span>
                     <i class="bi bi-chevron-down dropdown-indicator"></i
                   ></a>
                   <ul>
-                    <li><a href="#">Deep Drop Down 1</a></li>
+                    <li><a href="{% url 'yeosu' %}">여수</a></li>
+                    <li><a href="#">Deep Drop Down 2</a></li>
+                    <li><a href="#">Deep Drop Down 3</a></li>
+                    <li><a href="#">Deep Drop Down 4</a></li>
+                    <li><a href="#">Deep Drop Down 5</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#"
+                    ><span>전라북도</span>
+                    <i class="bi bi-chevron-down dropdown-indicator"></i
+                  ></a>
+                  <ul>
+                    <li><a href="{% url 'jeonju' %}">전주</a></li>
                     <li><a href="#">Deep Drop Down 2</a></li>
                     <li><a href="#">Deep Drop Down 3</a></li>
                     <li><a href="#">Deep Drop Down 4</a></li>
@@ -100,83 +111,20 @@
                 <li><a href="#">Drop Down 4</a></li>
               </ul>
             </li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="{% url 'product' %}">Shop</a></li>
+            <li><a href="#contact">Mypage</a></li>
           </ul>
         </nav>
         <!-- .navbar -->
 
-        <a class="btn-book-a-table" href="#book-a-table">Book a Table</a>
+        <a class="btn-book-a-table" href="#book-a-table"></a>
         <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       </div>
     </header>
+
     <!-- End Header -->
     {% block content %} {% endblock %}
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-      <div class="container">
-        <div class="row gy-3">
-          <div class="col-lg-3 col-md-6 d-flex">
-            <i class="bi bi-geo-alt icon"></i>
-            <div>
-              <h4>Address</h4>
-              <p>
-                A108 Adam Street <br />
-                New York, NY 535022 - US<br />
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links d-flex">
-            <i class="bi bi-telephone icon"></i>
-            <div>
-              <h4>Reservations</h4>
-              <p>
-                <strong>Phone:</strong> +1 5589 55488 55<br />
-                <strong>Email:</strong> info@example.com<br />
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links d-flex">
-            <i class="bi bi-clock icon"></i>
-            <div>
-              <h4>Opening Hours</h4>
-              <p>
-                <strong>Mon-Sat: 11AM</strong> - 23PM<br />
-                Sunday: Closed
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Follow Us</h4>
-            <div class="social-links d-flex">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Yummy</span></strong
-          >. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-    <!-- End Footer -->
 
     <a
       href="#"
