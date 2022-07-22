@@ -1,0 +1,63 @@
+﻿{
+  "lastBuildDate": "Sat, 16 Jul 2022 12:29:07 +0900",
+  "total": 5,
+  "start": 1,
+  "display": 5,
+  "items": [
+    {
+      "title": "명동게장",
+      "link": "http://www.명동게장.kr",
+      "category": "음식점>한식",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 여수시 봉산동 273-8",
+      "roadAddress": "전라남도 여수시 봉산남4길 23-26",
+      "mapx": "34.73281321007346",
+      "mapy": "127.72191042274463"
+    },
+    {
+      "title": "프롬나드",
+      "link": "https://www.instagram.com/promenade_yeosu/",
+      "category": "음식점>카페,디저트",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 여수시 우두리 661-16",
+      "roadAddress": "전라남도 여수시 돌산읍 우두3길 98 프롬나드",
+      "mapx": "34.71881944611742",
+      "mapy": "127.74504154068883"
+    },
+    {
+      "title": "모이핀",
+      "link": "http://www.모이핀.com/",
+      "category": "음식점>카페,디저트",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 여수시 돌산읍 평사리 1273-5",
+      "roadAddress": "전라남도 여수시 돌산읍 무술목길 50",
+      "mapx": "34.68782620428914",
+      "mapy": "127.7790541609695"
+    },
+    {
+      "title": "하모샤브샤브",
+      "link": "",
+      "category": "음식점>한식",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 여수시 학동 198-11",
+      "roadAddress": "전라남도 여수시 시청서3길 25-1",
+      "mapx": "34.75744277292971",
+      "mapy": " 127.65932375478391"
+    },
+    {
+      "title": "여수당",
+      "link": "http://www.instagram.com/yeosudang",
+      "category": "카페,디저트>베이커리",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 여수시 중앙동 779",
+      "roadAddress": "전라남도 여수시 중앙로 72",
+      "mapx": "34.73987415516362",
+      "mapy": "127.735345572584"
+    }
+  ]
+}

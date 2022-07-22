@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <h2>map view</h2>
+    <!--지도 크기-->
+    <div id="map" style="width: 800px; height: 600px"></div>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e193efa2dbe1f8aeb39cee4f196e2c09&libraries=services,clusterer,drawing"
+    ></script>
+    <script>
+      var container = document.getElementById("map");
+      //   좌표 정보, 확대/축소 정도
+      var options = {
+        center: new kakao.maps.LatLng(34.71375550662246, 127.72530343444086), //여수 오동도 위도 경도
+        level: 3,
+      };
+
+      var map = new kakao.maps.Map(container, options);
+      //   //문자열 공백 두개로 쪼개서 배열에 저장
+
+      //화살표 marker 위치
+      var markerPosition1 = new kakao.maps.LatLng(
+        34.76047348248397,
+        127.66227503381859
+      );
+      //marker 생성
+      var marker1 = new kakao.maps.Marker({
+        position: markerPosition1,
+      });
+      //marker 지도 위에 표시
+      marker1.setMap(map);
+      //
+      //화살표 marker 2
+      var markerPosition2 = new kakao.maps.LatLng(
+        34.74622679986665,
+        127.68188909049204
+      );
+      //marker 생성
+      var marker2 = new kakao.maps.Marker({
+        position: markerPosition2,
+      });
+      //marker 지도 위에 표시
+      marker2.setMap(map); //화살표 marker 2
+      var markerPosition2 = new kakao.maps.LatLng(
+        34.68786927979838,
+        127.77901364196026
+      );
+      //marker 생성
+      var marker2 = new kakao.maps.Marker({
+        position: markerPosition2,
+      });
+      //marker 지도 위에 표시
+      marker2.setMap(map);
+      //marker 3
+      var marker3 = new kakao.maps.Marker({
+        position: markerPosition3,
+      });
+      //marker 지도 위에 표시
+      marker3.setMap(map); //화살표 marker 2
+      var markerPosition3 = new kakao.maps.LatLng(
+        34.68786927979838,
+        127.77901364196026
+      );
+      //marker 생성
+      var marker3 = new kakao.maps.Marker({
+        position: markerPosition3,
+      });
+      //marker 지도 위에 표시
+      marker3.setMap(map);
+    </script>
+  </body>
+</html>

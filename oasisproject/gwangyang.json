@@ -1,0 +1,63 @@
+﻿{
+  "lastBuildDate": "Tue, 19 Jul 2022 21:06:43 +0900",
+  "total": 5,
+  "start": 1,
+  "display": 5,
+  "items": [
+    {
+      "title": "섬진강 뚝배기재첩식당",
+      "link": "http://섬진강뚝배기재첩.com/",
+      "category": "한식>해물,생선요리",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 광양시 다압면 신원리 496-3",
+      "roadAddress": "전라남도 광양시 다압면 백운3로 715",
+      "mapx": "35.059402252038076",
+      "mapy": "127.73711116230258"
+    },
+    {
+      "title": "삼대광양 불고기집",
+      "link": "http://삼대광양불고기집.kr/",
+      "category": "한식>육류,고기요리",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 광양시 광양읍 칠성리 959-11",
+      "roadAddress": "전라남도 광양시 광양읍 서천1길 52",
+      "mapx": "34.97013789916877",
+      "mapy": "127.57880993881662"
+    },
+    {
+      "title": "광양 소낭구",
+      "link": "http://www.sonanggu.kr",
+      "category": "한식>닭요리",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 광양시 광양읍 구산리 838-17",
+      "roadAddress": "전라남도 광양시 광양읍 서평로 40",
+      "mapx": "34.9777169068013",
+      "mapy": "127.57723701330912"
+    },
+    {
+      "title": "매실한우 광양불고기",
+      "link": "",
+      "category": "한식>소고기구이",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 광양시 광양읍 칠성리 959-5",
+      "roadAddress": "전라남도 광양시 광양읍 서천1길 46",
+      "mapx": "34.969779833029925",
+      "mapy": "127.57923447420231"
+    },
+    {
+      "title": "시내식당",
+      "link": "",
+      "category": "한식>육류,고기요리",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 광양시 광양읍 칠성리 964-1",
+      "roadAddress": "전라남도 광양시 광양읍 서천1길 38",
+      "mapx": "34.96927118263801",
+      "mapy": "127.57957581987972"
+    }
+  ]
+}

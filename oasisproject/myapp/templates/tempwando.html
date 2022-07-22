@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <h2>완도 핫플</h2>
+    {% for re in restaurants %}
+    <li>{{re.name}}</li>
+    {% endfor %}
+    <!--지도 크기-->
+    <div id="map" style="width: 800px; height: 600px"></div>
+    <!-- 식당 -->
+    <div id="lat" style="display: none">
+      {% for re in restaurants %} {{re.latitude}} {% endfor %}
+    </div>
+    <div id="lng" style="display: none">
+      {% for re in restaurants %} {{re.longitude}} {% endfor %}
+    </div>
+    <div id="name" style="display: none">
+      {% for re in restaurants %} {{re.name}} {% endfor %}
+    </div>
+    <div id="lat2" style="display: none">
+      {% for v in visit %} {{v.latitude}} {% endfor %}
+    </div>
+    <div id="lng2" style="display: none">
+      {% for v in visit %} {{v.longitude}} {% endfor %}
+    </div>
+    <div id="name2" style="display: none">
+      {% for v in visit %} {{v.name}} {% endfor %}
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e193efa2dbe1f8aeb39cee4f196e2c09&libraries=services,clusterer,drawing"
+    ></script>
+    <script>
+      var container = document.getElementById("map");
+      //   좌표 정보, 확대/축소 정도
+      var options = {
+        center: new kakao.maps.LatLng(34.34893333035498, 126.69931682449892), //처음위치 위도 경도
+        level: 8,
+      };
+
+      var map = new kakao.maps.Map(container, options);
+      //   //문자열 공백 두개로 쪼개서 배열에 저장
+      var list_lat = document
+        .getElementById("lat")
+        .innerText.trim()
+        .split("  ");
+      var list_lng = document
+        .getElementById("lng")
+        .innerText.trim()
+        .split("  ");
+      var list_name = document
+        .getElementById("name")
+        .innerText.trim()
+        .split("  ");
+      //   //관광지
+      var list_lat2 = document
+        .getElementById("lat2")
+        .innerText.trim()
+        .split("  ");
+      var list_lng2 = document
+        .getElementById("lng2")
+        .innerText.trim()
+        .split("  ");
+      var list_name2 = document
+        .getElementById("name2")
+        .innerText.trim()
+        .split("  ");
+
+      var restaurantCoordinates = new Array(); //좌표 정보를 저장할 배열 생성
+      var visitCoordinates = new Array(); //관광지 좌표 배열
+
+      //위도, 경도 정보 for문 수행하여 차례로 좌표 배열에 저장
+      for (var idx = 0; idx < list_lat.length; idx++) {
+        var latitude = list_lat[idx];
+        var longitude = list_lng[idx];
+        restaurantCoordinates.push(new kakao.maps.LatLng(latitude, longitude));
+      }
+      //   //관광지
+      for (var idx = 0; idx < list_lat2.length; idx++) {
+        var latitude2 = list_lat2[idx];
+        var longitude2 = list_lng2[idx];
+        visitCoordinates.push(new kakao.maps.LatLng(latitude2, longitude2));
+      }
+      //marker 이미지
+      var imageSrc = "{% static '/img/redmarker2.png' %}";
+      // 마커 이미지의 이미지 크기 입니다
+      var imageSize = new kakao.maps.Size(35, 35);
+      // 마커 이미지를 생성합니다
+      var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+      //저장한 좌표의 수만큼 지도에 marker 띄어줌
+      for (var idx = 0; idx < restaurantCoordinates.length; idx++) {
+        var marker = new kakao.maps.Marker({
+          map: map,
+          position: restaurantCoordinates[idx],
+          title: list_name[idx],
+          image: markerImage,
+        });
+      }
+      marker.setMap(map);
+      //관광지
+      //marker 이미지
+      var imageSrc = "{% static '/img/yellowmarker.png' %}";
+      // 마커 이미지의 이미지 크기 입니다
+      var imageSize = new kakao.maps.Size(35, 35);
+      // 마커 이미지를 생성합니다
+      var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+      for (var idx = 0; idx < visitCoordinates.length; idx++) {
+        var marker2 = new kakao.maps.Marker({
+          map: map,
+          position: visitCoordinates[idx],
+          title: list_name2[idx],
+          image: markerImage,
+        });
+      }
+      marker2.setMap(map);
+
+      //관광지
+    </script>
+  </body>
+</html>

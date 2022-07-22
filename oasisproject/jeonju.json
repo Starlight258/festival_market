@@ -1,0 +1,63 @@
+﻿{
+  "lastBuildDate": "Sat, 16 Jul 2022 22:35:20 +0900",
+  "total": 5,
+  "start": 1,
+  "display": 5,
+  "items": [
+    {
+      "title": "조점례남문피순대",
+      "link": "",
+      "category": "한식>순대,순댓국",
+      "description": "",
+      "telephone": "",
+      "address": "전라북도 전주시 완산구 전동3가 2-246",
+      "roadAddress": "전라북도 전주시 완산구 전동3가 2-246",
+      "mapx": "35.81253942588532",
+      "mapy": "127.14691852430585"
+    },
+    {
+      "title": "PNB 풍년제과 본점",
+      "link": "http://www.pnb본점.com/",
+      "category": "음식점>베이커리",
+      "description": "",
+      "telephone": "",
+      "address": "전라북도 전주시 완산구 경원동1가 40-5",
+      "roadAddress": "전라북도 전주시 완산구 팔달로 180",
+      "mapx": "35.818401784567456",
+      "mapy": "127.14719766583298"
+    },
+    {
+      "title": "다우랑",
+      "link": "https://smartstore.naver.com/dawoorang",
+      "category": "분식>만두",
+      "description": "",
+      "telephone": "",
+      "address": "전라북도 전주시 완산구 교동 269-2",
+      "roadAddress": "전라북도 전주시 완산구 태조로 33",
+      "mapx": "35.8465438908038",
+      "mapy": "127.12062191139671"
+    },
+    {
+      "title": "늘채움",
+      "link": "",
+      "category": "한식>한정식",
+      "description": "",
+      "telephone": "",
+      "address": "전라북도 전주시 덕진구 덕진동2가 200-5",
+      "roadAddress": "전라북도 전주시 덕진구 덕진연못3길 6",
+      "mapx": "35.8465438908038",
+      "mapy": "127.12062191139671"
+    },
+    {
+      "title": "현대옥 전주 본점",
+      "link": "http://hyundaiok.com/",
+      "category": "한식>국밥",
+      "description": "",
+      "telephone": "",
+      "address": "전라북도 전주시 완산구 중화산동2가 757-3",
+      "roadAddress": "전라북도 전주시 완산구 화산천변2길 7-4",
+      "mapx": "35.81972137727654",
+      "mapy": "127.11714539102783"
+    }
+  ]
+}

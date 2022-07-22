@@ -1,0 +1,63 @@
+﻿{
+  "lastBuildDate": "Mon, 18 Jul 2022 00:13:59 +0900",
+  "total": 5,
+  "start": 1,
+  "display": 5,
+  "items": [
+    {
+      "title": "완도 타워",
+      "link": "http://www.wando.go.kr/tour/attraction",
+      "category": "여행,명소>지역명소",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 완도군 완도읍 군내리 205-2",
+      "roadAddress": "전라남도 완도군 완도읍 장보고대로 330",
+      "mapx": "34.310677106268734",
+      "mapy": "126.76663600343903"
+    },
+    {
+      "title": "완도 수목원",
+      "link": "http://www.wando-arboretum.go.kr/",
+      "category": "여행,명소>식물원,수목원",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 완도군 군외면 대문리 산109-1",
+      "roadAddress": "전라남도 완도군 군외면 초평1길 156",
+      "mapx": "34.35921081729227",
+      "mapy": "126.66486506617336"
+    },
+    {
+      "title": "보길도",
+      "link": "",
+      "category": "여행,명소>섬",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 완도군 완도읍",
+      "roadAddress": "전라남도 완도군 완도읍",
+      "mapx": "34.142828129807164",
+      "mapy": "126.55227259587184"
+    },
+    {
+      "title": "장도청해진장보고유적",
+      "link": "",
+      "category": "여행,명소>유적지,사적지",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 완도군 완도읍 장좌리 787",
+      "roadAddress": "전라남도 완도군 완도읍 장좌리 787",
+      "mapx": "34.35138586844314",
+      "mapy": "126.69953088674944"
+    },
+    {
+      "title": "완도 정도리구계등",
+      "link": "",
+      "category": "여행,명소>자연명소",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 완도군 완도읍 정도리 152-1",
+      "roadAddress": "전라남도 완도군 완도읍 정도리 152-1",
+      "mapx": "34.2977009050497",
+      "mapy": "126.70618523002057"
+    }
+  ]
+}

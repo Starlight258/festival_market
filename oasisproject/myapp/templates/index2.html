@@ -1,0 +1,489 @@
+{% extends 'base.html' %} {% load static %}  {% block content %}
+
+
+    <main id="main">
+      <!-- ======= Menu Section ======= -->
+      <section id="menu custom" class="menu">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+          </div>
+
+          <ul
+            class="nav nav-tabs d-flex justify-content-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+   
+          </ul>
+
+          <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
+            <div class="tab-pane fade active show" id="menu-starters">
+              <div class="tab-header text-center">
+                <h3>축제 정보</h3>
+                <button type="button" class="btn btn-light"><img
+                    src="{% static 'img/previous.png' %}"
+                    class="menu-img img-fluid"
+                    alt="" style="width:10px; height:10px;"
+                /></button>7월
+<button type="button" class="btn btn-light"><img
+    src="{% static 'img/next.png' %}"
+    class="menu-img img-fluid"
+    alt="" style="width:10px; height:10px;"
+/></button>
+                
+                
+              </div>
+              <div class="row gy-5">
+                <div class="col-lg-4 menu-item">
+                  <a href="{% static 'img/cablecar.png' %}" class="glightbox"
+                    ><img
+                      src="{% static 'img/1.png' %}"
+                      class="menu-img img-fluid"
+                      alt="" style="width:500px; height:210px;"
+                  /></a>
+                  <a href="{% url 'detail' 1 %}">
+                    <h4>정남진 장흥 물축제</h4>
+                    <p class="ingredients">2022. 7. 30 ~ 8. 7</p>
+                    <p class="price"></p> </a>
+                </div>
+                <!-- Menu Item -->
+                
+
+                <div class="col-lg-4 menu-item">
+                  <a href="{% static '/img/ggjeon.png' %}" class="glightbox"
+                    ><img
+                      src="{% static '/img/7.png' %}"
+                      class="menu-img img-fluid"
+                      alt="" style="width:500px; height:210px;"
+                  /></a>
+                  <a href="{% url 'detail' 2 %}">
+                  <h4>곡성 아이스크림 페스티벌</h4>
+                  <p class="ingredients">2022. 7. 15 ~ 17</p>
+                  <p class="price"></p>
+                </div></a>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a href="{% static '/img/purple.png' %}" class="glightbox"
+                    ><img
+                      src="{% static '/img/3.png' %}"
+                      class="menu-img img-fluid"
+                      alt="" style="width:500px; height:210px;"
+                  /></a>
+                  <a href="{% url 'detail' 3 %}">
+                  <h4>해남땅끝수국축제</h4>
+                  <p class="ingredients">2022. 6. 6 ~ 7. 18</p>
+                  <p class="price"></p> </a>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a href="{% static '/img/flower.png' %}" class="glightbox"
+                    ><img
+                      src="{% static '/img/4.png' %}"
+                      class="menu-img img-fluid"
+                      alt="" style="width:500px; height:210px;"
+                  /></a>
+                  <a href="{% url 'detail' 4 %}">
+                  <h4>무안연꽃축제</h4>
+                  <p class="ingredients">2022. 7. 21 ~ 24</p>
+                  <p class="price"></p> </a>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a href="{% static '/img/expo.png' %}" class="glightbox"
+                    ><img
+                      src="{% static '/img/5.png' %}"
+                      class="menu-img img-fluid"
+                      alt="" style="width:500px; height:210px;"
+                  /></a>
+                  </a>
+                  <a href="{% url 'detail' 5 %}">
+                  <h4>목포 문화재야행</h4>
+                  <p class="ingredients">2022. 7. 29 ~ 30</p>
+                  <p class="price"></p></a>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a href="{% static '/img/mono.png' %}" class="glightbox"
+                    ><img
+                      src="{% static '/img/king.png' %}"
+                      class="menu-img img-fluid"
+                      alt="" style="width:500px; height:210px;"
+                  /></a>
+                  <a href="festival/6">
+                  <h4>전주 경기전 왕과의 산책</h4>
+                  <p class="ingredients">2022. 7. 29 ~ 31</p>
+                  <p class="price"></p> </a>
+                </div>
+                <!-- Menu Item -->
+              </div>
+            </div>
+            <!-- End Starter Menu Content -->
+
+            <div class="tab-pane fade" id="menu-breakfast">
+              <div class="tab-header text-center">
+                <p>Menu</p>
+                <h3>교통</h3>
+              </div>
+
+              <div class="row gy-5">
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-1.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-1.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Magnam Tiste</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$5.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-2.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-2.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Aut Luia</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$14.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-3.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-3.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Est Eligendi</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$8.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-4.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-4.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Eos Luibusdam</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$12.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-5.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-5.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Eos Luibusdam</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$12.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-6.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-6.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Laboriosam Direva</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$9.95</p>
+                </div>
+                <!-- Menu Item -->
+              </div>
+            </div>
+            <!-- End Breakfast Menu Content -->
+
+            <div class="tab-pane fade" id="menu-lunch">
+              <div class="tab-header text-center">
+                <p>Menu</p>
+                <h3>Lunch</h3>
+              </div>
+
+              <div class="row gy-5">
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-1.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-1.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Magnam Tiste</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$5.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-2.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-2.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Aut Luia</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$14.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-3.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-3.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Est Eligendi</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$8.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-4.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-4.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Eos Luibusdam</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$12.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-5.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-5.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Eos Luibusdam</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$12.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-6.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-6.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Laboriosam Direva</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$9.95</p>
+                </div>
+                <!-- Menu Item -->
+              </div>
+            </div>
+            <!-- End Lunch Menu Content -->
+
+            <div class="tab-pane fade" id="menu-dinner">
+              <div class="tab-header text-center">
+                <p>Menu</p>
+                <h3>Dinner</h3>
+              </div>
+
+              <div class="row gy-5">
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-1.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-1.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Magnam Tiste</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$5.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-2.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-2.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Aut Luia</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$14.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-3.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-3.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Est Eligendi</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$8.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-4.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-4.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Eos Luibusdam</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$12.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-5.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-5.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Eos Luibusdam</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$12.95</p>
+                </div>
+                <!-- Menu Item -->
+
+                <div class="col-lg-4 menu-item">
+                  <a
+                    href="{% static '/img/menu/menu-item-6.png' %}"
+                    class="glightbox"
+                    ><img
+                      src="{% static '/img/menu/menu-item-6.png' %}"
+                      class="menu-img img-fluid"
+                      alt=""
+                  /></a>
+                  <h4>Laboriosam Direva</h4>
+                  <p class="ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                  </p>
+                  <p class="price">$9.95</p>
+                </div>
+                <!-- Menu Item -->
+              </div>
+            </div>
+            <!-- End Dinner Menu Content -->
+          </div>
+        </div>
+      </section>
+      <!-- End Menu Section -->
+    </main>
+    <!-- End #main -->
+
+    {% endblock %}
+
+    <a
+      href="#"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/vendor/aos/aos.js' %}"></script>
+    <script src="{% static '/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static '/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static '/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static '/vendor/php-email-form/validate.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static '/js/main.js' %}"></script>
+  </body>
+</html>

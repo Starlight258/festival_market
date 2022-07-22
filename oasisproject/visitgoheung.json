@@ -1,0 +1,63 @@
+﻿{
+  "lastBuildDate": "Tue, 19 Jul 2022 20:37:55 +0900",
+  "total": 5,
+  "start": 1,
+  "display": 5,
+  "items": [
+    {
+      "title": "녹동항",
+      "link": "",
+      "category": "여행,명소>항구",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 고흥군 도양읍",
+      "roadAddress": "전라남도 고흥군 도양읍",
+      "mapx": "34.52294878968345",
+      "mapy": "127.14367502741975"
+    },
+    {
+      "title": "고흥 우주발사전망대",
+      "link": "",
+      "category": "여행,명소>전망대",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 고흥군 영남면 남열리  산76-1",
+      "roadAddress": "전라남도 고흥군 영남면 남열리  산76-1",
+      "mapx": " 34.58507435123017",
+      "mapy": "127.49227228161034"
+    },
+    {
+      "title": "남열해돋이해수욕장",
+      "link": "",
+      "category": "여행,명소>해수욕장,해변",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 고흥군 영남면 남열리",
+      "roadAddress": "전라남도 고흥군 영남면 남열리",
+      "mapx": "34.57976955653788",
+      "mapy": "127.4866172469079"
+    },
+    {
+      "title": "팔영산",
+      "link": "",
+      "category": "여행,명소>산,고개",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 고흥군 영남면 금사리",
+      "roadAddress": "전라남도 고흥군 영남면 금사리",
+      "mapx": "34.617188549276214",
+      "mapy": "127.43642791899538"
+    },
+    {
+      "title": "소록도",
+      "link": "",
+      "category": "여행,명소>섬",
+      "description": "",
+      "telephone": "",
+      "address": "전라남도 고흥군 도양읍 소록리",
+      "roadAddress": "전라남도 고흥군 도양읍 소록리",
+      "mapx": "34.5122644467509",
+      "mapy": "127.11597408074596"
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static '/vendor/aos/aos3.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/bootstrap/css/bootstrap.min3.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/bootstrap-icons/bootstrap-icons3.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/boxicons/css/boxicons.min3.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/glightbox/css/glightbox.min3.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/swiper/swiper-bundle.min3.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static '/css/style3.css'%}" rel="stylesheet">
+  <link href="{% static '/css/mapcustom2.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Squadfree - v4.7.0
+  * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a
+        href="/"
+        class="logo d-flex align-items-center me-auto me-lg-0"
+      >
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <!-- <h1>마일리지<span>.</span></h1>-->
+          <img src="{% static '/img/ourlg.png' %}" alt="" />
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <!-- <li><a href="#about">About</a></li> -->
+          <li class="dropdown">
+            <a href="#"
+              ><span>Map</span>
+              <i class="bi bi-chevron-down dropdown-indicator"></i
+            ></a>
+            <ul>
+              <li class="dropdown">
+                <a href="#"
+                  ><span>전라남도</span>
+                  <i class="bi bi-chevron-down dropdown-indicator"></i
+                ></a>
+                <ul>
+                  <li><a href="{% url 'gwangyang' %}">광양</a></li>
+                  
+                  <li><a href="{% url 'goheung' %}">고흥</a></li>
+                  <li><a href="#">신안</a></li>
+                  <li><a href="{% url 'yeosu' %}">여수</a></li>
+                  <li><a href="{% url 'wando' %}">완도</a></li>
+
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#"
+                  ><span>전라북도</span>
+                  <i class="bi bi-chevron-down dropdown-indicator"></i
+                ></a>
+                <ul>
+                  <li><a href="#">군산</a></li>
+                  <li><a href="#">임실</a></li>
+                  <li><a href="{% url 'jeonju' %}">전주</a></li>
+                  <li><a href="#">정읍</a></li>
+
+                </ul>
+              </li>
+              <!-- <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li> -->
+            </ul>
+          </li>
+          <li><a href="{% url 'product' %}">Shop</a></li>
+
+          <li><a href="{% url 'mypage' %}">MyPage</a></li>
+        </ul>
+      </nav>
+      <!-- .navbar -->
+
+      <a class="btn-book-a-table" href="#book-a-table"></a>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+  </header>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <br/><br/>
+          <h2>전주</h2>
+       
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-lg-6 ">
+           
+          <!--지도 크기-->
+    <div id="map" class="mb-4 mb-lg-0" style="width: 650px; height: 540px"></div>
+    <div id="lat" style="display: none">
+      {% for re in restaurants %} {{re.latitude}} {% endfor %}
+    </div>
+    <div id="lng" style="display: none">
+      {% for re in restaurants %} {{re.longitude}} {% endfor %}
+    </div>
+    <div id="name" style="display: none">
+      {% for re in restaurants %} {{re.name}} {% endfor %}
+    </div>
+    <div id="lat2" style="display: none">
+      {% for v in visit %} {{v.latitude}} {% endfor %}
+    </div>
+    <div id="lng2" style="display: none">
+      {% for v in visit %} {{v.longitude}} {% endfor %}
+    </div>
+    <div id="name2" style="display: none">
+      {% for v in visit %} {{v.name}} {% endfor %}
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e193efa2dbe1f8aeb39cee4f196e2c09&libraries=services,clusterer,drawing"
+    ></script>
+      <script>
+        var container = document.getElementById("map");
+        //   좌표 정보, 확대/축소 정도
+        var options = {
+          center: new kakao.maps.LatLng(35.823842217635985, 127.147949156726), //처음위치 위도 경도
+          level: 7,
+        };
+
+        var map = new kakao.maps.Map(container, options);
+        // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
+        var linePath = [
+          new kakao.maps.LatLng(33.452344169439975, 126.56878163224233),
+          new kakao.maps.LatLng(33.452739313807456, 126.5709308145358),
+          new kakao.maps.LatLng(33.45178067090639, 126.5726886938753),
+        ];
+
+      // 지도에 표시할 선을 생성합니다
+        var polyline = new kakao.maps.Polyline({
+          path: linePath, // 선을 구성하는 좌표배열 입니다
+          strokeWeight: 5, // 선의 두께 입니다
+          strokeColor: "#FFAE00", // 선의 색깔입니다
+          strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+          strokeStyle: "solid", // 선의 스타일입니다
+        });
+
+        // 지도에 선을 표시합니다
+        polyline.setMap(map);   
+
+
+
+        //   //문자열 공백 두개로 쪼개서 배열에 저장
+        var list_lat = document
+          .getElementById("lat")
+          .innerText.trim()
+          .split("  ");
+        var list_lng = document
+          .getElementById("lng")
+          .innerText.trim()
+          .split("  ");
+        var list_name = document
+          .getElementById("name")
+          .innerText.trim()
+          .split("  ");
+        //   //관광지
+        var list_lat2 = document
+          .getElementById("lat2")
+          .innerText.trim()
+          .split("  ");
+        var list_lng2 = document
+          .getElementById("lng2")
+          .innerText.trim()
+          .split("  ");
+        var list_name2 = document
+          .getElementById("name2")
+          .innerText.trim()
+          .split("  ");
+
+        var restaurantCoordinates = new Array(); //좌표 정보를 저장할 배열 생성
+        var visitCoordinates = new Array(); //관광지 좌표 배열
+
+        //위도, 경도 정보 for문 수행하여 차례로 좌표 배열에 저장
+        for (var idx = 0; idx < list_lat.length; idx++) {
+          var latitude = list_lat[idx];
+          var longitude = list_lng[idx];
+          restaurantCoordinates.push(new kakao.maps.LatLng(latitude, longitude));
+        }
+        for (var idx = 0; idx < list_lat2.length; idx++) {
+          var latitude2 = list_lat2[idx];
+          var longitude2 = list_lng2[idx];
+          visitCoordinates.push(new kakao.maps.LatLng(latitude2, longitude2));
+        }
+        //marker 이미지
+        var imageSrc = "{% static '/img/redmarker2.png' %}";
+        // 마커 이미지의 이미지 크기 입니다
+        var imageSize = new kakao.maps.Size(35, 35);
+        // 마커 이미지를 생성합니다
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
+        //저장한 좌표의 수만큼 지도에 marker 띄어줌
+        for (var idx = 0; idx < restaurantCoordinates.length; idx++) {
+          var marker = new kakao.maps.Marker({
+            map: map,
+            position: restaurantCoordinates[idx],
+            title: list_name[idx],
+            image: markerImage, // 마커 이미지
+          });
+        }
+        marker.setMap(map);
+        //marker 이미지
+        var imageSrc = "{% static '/img/yellowmarker.png' %}";
+        // 마커 이미지의 이미지 크기 입니다
+        var imageSize = new kakao.maps.Size(35, 35);
+        // 마커 이미지를 생성합니다
+        var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+        for (var idx = 0; idx < visitCoordinates.length; idx++) {
+          var marker2 = new kakao.maps.Marker({
+            map: map,
+            position: visitCoordinates[idx],
+            title: list_name2[idx],
+            image: markerImage,
+          });
+        }
+        marker2.setMap(map);
+      </script>
+          </div>
+
+          <div class="col-lg-6 ">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0"> 
+                </div>
+              </div>
+              <div class="form-group">
+                <h4 class="text-warning"><strong>관광지</strong></h4><br/>
+                {% for v in visit %} <li>{{v.name}}</li> {{v.location}}<hr/>  {% endfor %}
+                <div class="text-end"><button type="submit" class="me-md-2">Next</button></div>
+                <h4 class="text-danger"><strong>추천 식당</strong></h4><br/>
+                {% for re in restaurants %} <li>{{re.name}}</li> {{re.location}}<hr/> {% endfor %}
+                <div class="text-end">
+                  <button type="submit" class="" onclick="location.href='../'">Back</button>
+                  <button type="submit" class="me-md-2 text-right">Next</button>
+                <div class="text-center"><button onclick="location.href='../course'" class="btn btn-success r" type="submit">코스 추천</button></div>
+
+              </div>
+            </form>
+          </div>
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- Vendor JS Files -->
+  <script src="{% static '/vendor/purecounter/purecounter3.js' %}"></script>
+  <script src="{% static '/vendor/aos/aos3.js' %}"></script>
+  <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min3.js' %}"></script>
+  <script src="{% static '/vendor/glightbox/js/glightbox.min3.js' %}"></script>
+  <script src="{% static '/vendor/isotope-layout/isotope.pkgd.min3.js' %}"></script>
+  <script src="{% static '/vendor/swiper/swiper-bundle.min3.js' %}"></script>
+  <script src="{% static '/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static '/js/main3.js' %}"></script>
+
+</body>
+
+</html>

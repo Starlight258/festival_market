@@ -1,0 +1,289 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static '/vendor/aos/aos3.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/bootstrap/css/bootstrap.min3.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/bootstrap-icons/bootstrap-icons3.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/boxicons/css/boxicons.min3.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/glightbox/css/glightbox.min3.css' %}" rel="stylesheet">
+  <link href="{% static '/vendor/swiper/swiper-bundle.min3.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static '/css/style3.css'%}" rel="stylesheet">
+  <link href="{% static '/css/mapcustom2.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Squadfree - v4.7.0
+  * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a
+        href="/"
+        class="logo d-flex align-items-center me-auto me-lg-0"
+      >
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <!-- <h1>마일리지<span>.</span></h1>-->
+          <img src="{% static '/img/ourlg.png' %}" alt="" />
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <!-- <li><a href="#about">About</a></li> -->
+          <li class="dropdown">
+            <a href="#"
+              ><span>Map</span>
+              <i class="bi bi-chevron-down dropdown-indicator"></i
+            ></a>
+            <ul>
+              <li class="dropdown">
+                <a href="#"
+                  ><span>전라남도</span>
+                  <i class="bi bi-chevron-down dropdown-indicator"></i
+                ></a>
+                <ul>
+                  <li><a href="{% url 'gwangyang' %}">광양</a></li>
+                  
+                  <li><a href="{% url 'goheung' %}">고흥</a></li>
+                  <li><a href="#">신안</a></li>
+                  <li><a href="{% url 'yeosu' %}">여수</a></li>
+                  <li><a href="{% url 'wando' %}">완도</a></li>
+
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#"
+                  ><span>전라북도</span>
+                  <i class="bi bi-chevron-down dropdown-indicator"></i
+                ></a>
+                <ul>
+                  <li><a href="#">군산</a></li>
+                  <li><a href="#">임실</a></li>
+                  <li><a href="{% url 'jeonju' %}">전주</a></li>
+                  <li><a href="#">정읍</a></li>
+
+                </ul>
+              </li>
+              <!-- <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li> -->
+            </ul>
+          </li>
+          <li><a href="{% url 'product' %}">Shop</a></li>
+
+          <li><a href="{% url 'mypage' %}">MyPage</a></li>
+        </ul>
+      </nav>
+      <!-- .navbar -->
+
+      <a class="btn-book-a-table" href="#book-a-table"></a>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+  </header>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <br/><br/>
+          <h2>축제 코스 추천</h2>
+          <p>"전주 경기전 왕과의 산책" 축제 전 관광 코스를 추천합니다.</p>
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-lg-6 ">
+           
+          <!--지도 크기-->
+          <div id="map" style="width:100%;height:675px;"></div>    
+
+
+        <script
+          type="text/javascript"
+          src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e193efa2dbe1f8aeb39cee4f196e2c09&libraries=services,clusterer,drawing"
+        ></script>
+      <script>
+          var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+      mapOption = { 
+          center: new kakao.maps.LatLng(35.85750983199743, 127.12127371663259), // 지도의 중심좌표
+          level: 7 // 지도의 확대 레벨
+      };  
+
+  var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+
+
+
+  // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
+  var linePath = [
+      new kakao.maps.LatLng(35.86038936565674, 127.10115436136884), //팔복 예술공장
+      new kakao.maps.LatLng(35.855370541350084, 127.14415785828892), //전주 동물원
+      new kakao.maps.LatLng(35.84750983199743, 127.12127371663259), //덕진 공원
+      new kakao.maps.LatLng(35.838123109903824, 127.12616429357627) //아무데나
+  ];
+
+  // 지도에 표시할 선을 생성합니다
+  var polyline = new kakao.maps.Polyline({
+      path: linePath, // 선을 구성하는 좌표배열 입니다
+      strokeWeight: 5, // 선의 두께 입니다
+      strokeColor: '#1363DF', // 선의 색깔입니다
+      strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+      strokeStyle: 'solid' // 선의 스타일입니다
+  });
+
+  // 지도에 선을 표시합니다 
+  polyline.setMap(map);  
+  //마커-팔복예술
+  var imageSrc = "{%static 'img/first.png' %}", // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(50, 50), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+        markerPosition = new kakao.maps.LatLng(35.85638936565674, 127.10115436136884); // 마커가 표시될 위치입니다
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition, 
+        image: markerImage // 마커이미지 설정 
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+    //마커2-전주동물원
+    var imageSrc = "{%static 'img/second.png' %}", // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(36, 36), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+        markerPosition = new kakao.maps.LatLng(35.850370541350084, 127.14615785828892); // 마커가 표시될 위치입니다
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition, 
+        image: markerImage // 마커이미지 설정 
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+        //마커3-덕진 공원
+        var imageSrc = "{%static 'img/third.png' %}", // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(36,36), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+        markerPosition = new kakao.maps.LatLng(35.84250983199743, 127.12127371663259); // 마커가 표시될 위치입니다
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition, 
+        image: markerImage // 마커이미지 설정 
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+    //마커4-전주 종합경기장 35.739176836198305, 127.1264964336897
+    var imageSrc = "{%static 'img/fourth.png' %}", // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(36, 36), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+        markerPosition = new kakao.maps.LatLng(35.832123109903824, 127.12616429357627); // 마커가 표시될 위치입니다
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition, 
+        image: markerImage // 마커이미지 설정 
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+
+
+     
+      </script>
+          </div>
+
+          <div class="col-lg-6 ">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0"> 
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary" onclick="location.href='../'">1</button>
+                <button type="submit" class="btn btn-primary" onclick="location.href='../'">2</button>
+                <button type="submit" class="btn btn-primary" onclick="location.href='../'">3</button>
+                <hr/>
+                
+                <h4 class="text-black"><strong>1. 팔복 예술 공장 </strong></h4>
+                <p>전북 전주시 덕진구 구렛들1길 46</p>
+                <p class="text-primary">300 마일</p><hr/>
+              
+                <h4 class="text-black"><strong>2. 전주 동물원</strong></h4>
+                <p>전북 전주시 덕진구 소리로 68 전주동물원
+                </p>
+                <p class="text-primary">200 마일</p><hr/>
+                <h4 class="text-black"><strong>3. 덕진 공원</strong></h4>
+                <p>전북 전주시 덕진구 권삼득로 390 전주덕진공원
+                </p>
+                <p class="text-primary">200 마일</p><hr/>
+                <h4 class="text-black"><strong>4. 전주 종합 경기장</strong></h4>
+                <p>전라북도 전주시 덕진구 기린대로 451 전주종합경기장</p>
+                <p class="text-primary">230 마일</p><hr/>
+                
+              </div>
+            </form>
+          </div>
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- Vendor JS Files -->
+  <script src="{% static '/vendor/purecounter/purecounter3.js' %}"></script>
+  <script src="{% static '/vendor/aos/aos3.js' %}"></script>
+  <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min3.js' %}"></script>
+  <script src="{% static '/vendor/glightbox/js/glightbox.min3.js' %}"></script>
+  <script src="{% static '/vendor/isotope-layout/isotope.pkgd.min3.js' %}"></script>
+  <script src="{% static '/vendor/swiper/swiper-bundle.min3.js' %}"></script>
+  <script src="{% static '/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static '/js/main3.js' %}"></script>
+
+</body>
+
+</html>

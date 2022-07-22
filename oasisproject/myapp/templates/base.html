@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>마일리지</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <!-- <link href="{% static 'img/favicon.png' %}" rel="icon" />
+    <link
+      href="{% static 'img/apple-touch-icon.png' %}"
+      rel="apple-touch-icon"
+    /> -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'vendor/glightbox/css/glightbox.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'vendor/swiper/swiper-bundle.min.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/productcustom.css' %}" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Yummy - v1.0.0
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="" class="logo d-flex align-items-center me-auto me-lg-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+
+          <img src="{% static '/img/ourlg.png' %}" alt="" />
+
+          <!-- <h1>마일리지<span>.</span></h1> -->
+        </a>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <!-- <li><a href="#about">About</a></li> -->
+            <li class="dropdown">
+              <a href="#"
+                ><span>Map</span>
+                <i class="bi bi-chevron-down dropdown-indicator"></i
+              ></a>
+              <ul>
+                <li class="dropdown">
+                  <a href="#"
+                    ><span>전라남도</span>
+                    <i class="bi bi-chevron-down dropdown-indicator"></i
+                  ></a>
+                  <ul>
+                    <li><a href="{% url 'gwangyang' %}">광양</a></li>
+
+                    <li><a href="{% url 'goheung' %}">고흥</a></li>
+                    <li><a href="#">신안</a></li>
+                    <li><a href="{% url 'yeosu' %}">여수</a></li>
+                    <li><a href="{% url 'wando' %}">완도</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#"
+                    ><span>전라북도</span>
+                    <i class="bi bi-chevron-down dropdown-indicator"></i
+                  ></a>
+                  <ul>
+                    <li><a href="#">군산</a></li>
+                    <li><a href="#">임실</a></li>
+                    <li><a href="{% url 'jeonju' %}">전주</a></li>
+                    <li><a href="#">정읍</a></li>
+                  </ul>
+                </li>
+                <!-- <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li> -->
+              </ul>
+            </li>
+            <li><a href="{% url 'product' %}">Shop</a></li>
+
+            <li><a href="{% url 'mypage' %}">MyPage</a></li>
+          </ul>
+        </nav>
+        <!-- .navbar -->
+
+        <a class="" href=""></a>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      </div>
+    </header>
+
+    <!-- End Header -->
+    {% block content %} {% endblock %}
+
+    <a
+      href="#"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/vendor/aos/aos.js' %}"></script>
+    <script src="{% static '/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static '/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static '/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static '/vendor/php-email-form/validate.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static '/js/main.js' %}"></script>
+  </body>
+</html>

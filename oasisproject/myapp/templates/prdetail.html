@@ -1,0 +1,222 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="{% static '/vendor/aos/aos2.css' %}" rel="stylesheet" />
+    <link
+      href="{% static '/vendor/bootstrap/css/bootstrap.min2.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static '/vendor/bootstrap-icons/bootstrap-icons2.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static '/vendor/boxicons/css/boxicons.min2.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static '/vendor/glightbox/css/glightbox.min2.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static '/vendor/swiper/swiper-bundle.min2.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- Template Main CSS File -->
+    <link href="{% static '/css/style2.css' %}" rel="stylesheet" />
+    <link href="{% static '/css/prcustom.css' %}" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Squadfree - v4.7.0
+  * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <a href="" class="logo d-flex align-items-center me-auto me-lg-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <img src="{% static '/img/ourlogo.png' %}" alt="" />
+
+          <!-- <h1>마일리지<span>.</span></h1> -->
+        </a>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <!-- <li><a href="#about">About</a></li> -->
+          <li class="dropdown">
+            <a href="#"
+              ><span>Map</span>
+              <i class="bi bi-chevron-down dropdown-indicator"></i
+            ></a>
+            <ul>
+              <li class="dropdown">
+                <a href="#"
+                  ><span>전라남도</span>
+                  <i class="bi bi-chevron-down dropdown-indicator"></i
+                ></a>
+                <ul>
+                  <li><a href="{% url 'gwangyang' %}">광양</a></li>
+                  
+                  <li><a href="{% url 'goheung' %}">고흥</a></li>
+                  <li><a href="#">신안</a></li>
+                  <li><a href="{% url 'yeosu' %}">여수</a></li>
+                  <li><a href="{% url 'wando' %}">완도</a></li>
+
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#"
+                  ><span>전라북도</span>
+                  <i class="bi bi-chevron-down dropdown-indicator"></i
+                ></a>
+                <ul>
+                  <li><a href="#">군산</a></li>
+                  <li><a href="#">임실</a></li>
+                  <li><a href="{% url 'jeonju' %}">전주</a></li>
+                  <li><a href="#">정읍</a></li>
+
+                </ul>
+              </li>
+              <!-- <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li> -->
+            </ul>
+          </li>
+          <li><a href="{% url 'product' %}">Shop</a></li>
+
+          <li><a href="{% url 'mypage' %}">MyPage</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn-book-a-table" href="#book-a-table"></a>
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+  </header>
+  <!-- End Header -->
+  <body>
+    <!-- ======= Header ======= -->
+
+    <main id="main">
+      <!-- ======= Portfolio Details Section ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                  {%if product.id == 1 %}
+                  <div class="swiper-slide">
+                    <img src="{% static '/img/cablecar.png' %}" alt="" />
+                  </div>
+                  {% elif product.id == 2 %}
+                  <div class="swiper-slide">
+                    <img src="{% static '/img/ggjeon.png' %}" alt="" />
+                  </div>
+                  {% elif product.id == 3 %}
+                  <div class="swiper-slide">
+                    <img src="{% static '/img/arte.png' %}" alt="" />
+                  </div>
+                  {% elif product.id == 4 %}
+                  <div class="swiper-slide">
+                    <img src="{% static '/img/flower.png' %}" alt="" />
+                  </div>
+                  {% elif product.id == 5 %}
+                  <div class="swiper-slide">
+                    <img src="{% static '/img/expo.png' %}" alt="" />
+                  </div>
+                  {% elif product.id == 6 %}
+                  <div class="swiper-slide">
+                    <img src="{% static '/img/mono.png' %}" alt="" />
+                  </div>
+                  {%endif%}
+                  <div class="swiper-slide">
+                    <img src="{% static '/img/portfolio-2.jpg' %}'" alt="" />
+                  </div>
+
+                  <div class="swiper-slide">
+                    <img src="{% static '/img/portfolio-3.jpg' %}'" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="portfolio-info">
+                <h3>{{product.name}}</h3>
+                <ul>
+                  <li>{{product.description}}</li>
+                  <li><br /><strong>{{product.price}} 마일</strong></li>
+                  <li>
+                    <strong>Project URL</strong>:
+                    <a href="#">www.example.com</a>
+                  </li>
+                </ul>
+                
+              </div>
+              <div class="col-lg-12">
+                <div class="text-end">
+                  <button type="button" class="btn-primary" onclick="location.href='../product'">Back</button>
+                  <button type="button" class="btn-primary me-md-2 text-right">구매하기</button>
+              </div>
+                <!-- <div class="portfolio-info col">
+                  <ul>
+                    <button type="button" class="btn-primary">구매하기</button>
+                  </ul>
+                  <p>* 구매 후에는 재적립 불가능합니다.</p>
+                  <ul>
+                    <button type="button" class="btn-primary">구매하기</button>
+                  </ul>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Portfolio Details Section -->
+    </main>
+    <!-- End #main -->
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static '/vendor/purecounter/purecounter.js' %}"></script>
+    <script src="{% static '/vendor/aos/aos2.js' %}"></script>
+    <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static '/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static '/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static '/vendor/php-email-form/validate.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static '/js/main.js' %}"></script>
+  </body>
+</html>

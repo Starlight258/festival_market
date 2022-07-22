@@ -1,0 +1,63 @@
+﻿{
+  "lastBuildDate": "Mon, 18 Jul 2022 01:15:18 +0900",
+  "total": 5,
+  "start": 1,
+  "display": 5,
+  "items": [
+    {
+      "title": "전주 한옥마을",
+      "link": "http://hanok.jeonju.go.kr",
+      "category": "여행,명소>지역명소",
+      "description": "",
+      "telephone": "",
+      "address": "전라북도 전주시 완산구 남노송동 100-1",
+      "roadAddress": "전라북도 전주시 완산구 기린대로 99",
+      "mapx": "35.81473597420815",
+      "mapy": "127.1525657741794"
+    },
+    {
+      "title": "전주 동물원",
+      "link": "http://zoo.jeonju.go.kr/",
+      "category": "여행,명소>동물원",
+      "description": "",
+      "telephone": "",
+      "address": "전라북도 전주시 덕진구 덕진동1가 73-48",
+      "roadAddress": "전라북도 전주시 덕진구 소리로 68 전주동물원",
+      "mapx": "35.8551495151463",
+      "mapy": "127.14434012502225"
+    },
+    {
+      "title": "한국도로공사 전주 수목원",
+      "link": "http://www.ex.co.kr/arboretum/",
+      "category": "여행,명소>식물원,수목원",
+      "description": "",
+      "telephone": "",
+      "address": "전라북도 전주시 덕진구 반월동 848-39",
+      "roadAddress": "전라북도 전주시 덕진구 번영로 462-45 전주수목원",
+      "mapx": "35.870464255773555",
+      "mapy": "127.05406877072522"
+    },
+    {
+      "title": "전주 덕진공원",
+      "link": "",
+      "category": "여행,명소>근린공원",
+      "description": "",
+      "telephone": "",
+      "address": "전라북도 전주시 덕진구 덕진동1가 1316-2",
+      "roadAddress": "전라북도 전주시 덕진구 권삼득로 390 전주 덕진공원",
+      "mapx": "35.84908047668093",
+      "mapy": "127.12328529088376"
+    },
+    {
+      "title": "자만벽화마을",
+      "link": "",
+      "category": "여행,명소>체험마을",
+      "description": "",
+      "telephone": "",
+      "address": "전라북도 전주시 완산구 교동 50-158",
+      "roadAddress": "전라북도 전주시 완산구 교동 50-158",
+      "mapx": "35.813792706547964",
+      "mapy": "127.1571891285057"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <h2>전주 핫플</h2>
+    {% for re in restaurants %}
+    <li>{{re.name}}</li>
+    {% endfor %}
+    <!--지도 크기-->
+    <div id="map" style="width: 800px; height: 600px"></div>
+    <div id="lat" style="display: none">
+      {% for re in restaurants %} {{re.latitude}} {% endfor %}
+    </div>
+    <div id="lng" style="display: none">
+      {% for re in restaurants %} {{re.longitude}} {% endfor %}
+    </div>
+    <div id="name" style="display: none">
+      {% for re in restaurants %} {{re.name}} {% endfor %}
+    </div>
+    <div id="lat2" style="display: none">
+      {% for v in visit %} {{v.latitude}} {% endfor %}
+    </div>
+    <div id="lng2" style="display: none">
+      {% for v in visit %} {{v.longitude}} {% endfor %}
+    </div>
+    <div id="name2" style="display: none">
+      {% for v in visit %} {{v.name}} {% endfor %}
+    </div>
+
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e193efa2dbe1f8aeb39cee4f196e2c09&libraries=services,clusterer,drawing"
+    ></script>
+    <script>
+      var container = document.getElementById("map");
+      //   좌표 정보, 확대/축소 정도
+      var options = {
+        center: new kakao.maps.LatLng(35.823842217635985, 127.1479491567267), //처음위치 위도 경도
+        level: 9,
+      };
+
+      var map = new kakao.maps.Map(container, options);
+      var markerPosition = new kakao.maps.LatLng(
+        35.823842217635985,
+        127.1479491567267
+      );
+      var marker = new kakao.maps.Marker({
+        position: markerPosition,
+      });
+      marker.setMap(map);
+    </script>
+  </body>
+</html>
